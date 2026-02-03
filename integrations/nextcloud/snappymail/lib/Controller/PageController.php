@@ -7,23 +7,27 @@ use OCA\SnappyMail\ContentSecurityPolicy;
 
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\TemplateResponse;
-
-// SnappyMail Nextcoud 32 compatibility workaound - START
-// src: https://github.com/the-djmaze/snappymail/issues/1994#issuecomment-3366086651
-
-use OCP\INavigationManager;  // <<<<<<<<<<<< add this 
-use OCP\Server; // <<<<<<<<<<<< add this 
+use OCP\INavigationManager;
+use OCP\IConfig;
+use OCP\IRequest;
 
 class PageController extends Controller
 {
+	private IConfig $config;
+	private INavigationManager $navigationManager;
+
+	public function __construct($appName, IRequest $request, IConfig $config, INavigationManager $navigationManager) {
+		parent::__construct($appName, $request);
+		$this->config = $config;
+		$this->navigationManager = $navigationManager;
+	}
+
 	/**
 	 * @NoAdminRequired
 	 * @NoCSRFRequired
 	 */
 	public function index()
 	{
-		$config = \OC::$server->getConfig();
-        $nav = Server::get(INavigationManager::class);  // <<<<<<<<<<<< add this 
 		$bAdmin = false;
 		if (!empty($_SERVER['QUERY_STRING'])) {
 			SnappyMailHelper::loadApp();
@@ -33,11 +37,8 @@ class PageController extends Controller
 			}
 		}
 
-		if (!$bAdmin && $config->getAppValue('snappymail', 'snappymail-no-embed')) {
-            // \OC::$server->getNavigationManager()->setActiveEntry('snappymail'); // <<<<<<<<<<<< Comment this
-            $nav->setActiveEntry('snappymail');  // <<<<<<<<<<<< add this 
-			\OCP\Util::addScript('snappymail', 'snappymail');
-			\OCP\Util::addStyle('snappymail', 'style');
+		if (!$bAdmin && $this->config->getAppValue('snappymail', 'snappymail-no-embed')) {
+			$this->navigationManager->setActiveEntry('snappymail');
 			SnappyMailHelper::startApp();
 			$response = new TemplateResponse('snappymail', 'index', [
 				'snappymail-iframe-url' => SnappyMailHelper::normalizeUrl(SnappyMailHelper::getAppUrl())
@@ -50,12 +51,7 @@ class PageController extends Controller
 			return $response;
 		}
 
-		// \OC::$server->getNavigationManager()->setActiveEntry('snappymail'); // <<<<<<<<<<<< Comment this
-        $nav->setActiveEntry('snappymail');  // <<<<<<<<<<<< add this
-
-// SnappyMail Nextcoud 32 compatibility workaound - END
-
-		\OCP\Util::addStyle('snappymail', 'embed');
+		$this->navigationManager->setActiveEntry('snappymail');
 
 		SnappyMailHelper::startApp();
 		$oConfig = \RainLoop\Api::Config();
@@ -69,6 +65,8 @@ class PageController extends Controller
 		$csp = new ContentSecurityPolicy();
 		$sNonce = $csp->getSnappyMailNonce();
 
+		$cssLink = \RainLoop\Utils::WebStaticPath('css/'.($bAdmin?'admin':'app').$sAppCssMin.'.css');
+
 		$params = [
 			'Admin' => $bAdmin ? 1 : 0,
 			'LoadingDescriptionEsc' => \htmlspecialchars($oConfig->Get('webmail', 'loading_description', 'SnappyMail'), ENT_QUOTES|ENT_IGNORE, 'UTF-8'),
@@ -81,15 +79,9 @@ class PageController extends Controller
 				'/\\s*([:;{},]+)\\s*/s',
 				'$1',
 				$oActions->compileCss($oActions->GetTheme($bAdmin), $bAdmin)
-			)
+			),
+			'CssLink' => $cssLink
 		];
-
-//		\OCP\Util::addScript('snappymail', '../app/snappymail/v/'.APP_VERSION.'/static/js'.($sAppJsMin ? '/min' : '').'/boot'.$sAppJsMin);
-
-		// Nextcloud html encodes, so addHeader('style') is not possible
-//		\OCP\Util::addHeader('style', ['id'=>'app-boot-css'], \file_get_contents(APP_VERSION_ROOT_PATH.'static/css/boot'.$sAppCssMin.'.css'));
-		\OCP\Util::addHeader('link', ['type'=>'text/css','rel'=>'stylesheet','href'=>\RainLoop\Utils::WebStaticPath('css/'.($bAdmin?'admin':'app').$sAppCssMin.'.css')], '');
-//		\OCP\Util::addHeader('style', ['id'=>'app-theme-style','data-href'=>$params['BaseAppThemeCssLink']], $params['BaseAppThemeCss']);
 
 		$response = new TemplateResponse('snappymail', 'index_embed', $params);
 
