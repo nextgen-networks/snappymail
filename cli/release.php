@@ -207,7 +207,7 @@ if ($options['aur']) {
 	pkgdesc = modern PHP webmail client
 	pkgver = '.$package->version.'
 	pkgrel = 1
-	url = https://github.com/the-djmaze/snappymail
+	url = https://github.com/nextgen-networks/snappymail
 	arch = any
 	license = AGPL3
 	makedepends = php
@@ -218,7 +218,7 @@ if ($options['aur']) {
 	optdepends = mariadb: storage backend for contacts
 	optdepends = php-pgsql: storage backend for contacts
 	optdepends = php-sqlite: storage backend for contacts
-	source = snappymail-'.$package->version.'.tar.gz::https://github.com/the-djmaze/snappymail/archive/v'.$package->version.'.tar.gz
+	source = snappymail-'.$package->version.'.tar.gz::https://github.com/nextgen-networks/snappymail/archive/v'.$package->version.'.tar.gz
 	source = snappymail.sysusers
 	source = snappymail.tmpfiles
 	b2sums = '.implode("\n	b2sums = ", $b2sums).'
@@ -269,7 +269,7 @@ if (isset($options['sign'])) {
 	if (isset($options['debian'])) {
 		passthru('gpg --local-user 1016E47079145542F8BA133548208BA13290F3EB --armor --detach-sign '
 			. escapeshellarg(ROOT_DIR . "/build/dist/releases/webmail/{$package->version}/" . basename(DEB_DEST_DIR.'.deb')), $return_var);
-		// https://github.com/the-djmaze/snappymail/issues/185#issuecomment-1059420588
+		// https://github.com/nextgen-networks/snappymail/issues/185#issuecomment-1059420588
 		passthru('gpg --local-user 1016E47079145542F8BA133548208BA13290F3EB --digest-algo SHA512 --clearsign --output '
 			. escapeshellarg(ROOT_DIR . "/build/dist/releases/webmail/{$package->version}/InRelease") . ' '
 			. escapeshellarg(ROOT_DIR . "/build/dist/releases/webmail/{$package->version}/Release"), $return_var);
