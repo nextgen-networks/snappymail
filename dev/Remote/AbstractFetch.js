@@ -47,7 +47,7 @@ fetchJSON = (action, sUrl, params, timeout, jsonCallback) => {
 			params.Action = action;
 		}
 	}
-	// Don't abort, read https://github.com/nextgen-networks/snappymail/issues/487
+	// Don't abort, read https://github.com/the-djmaze/snappymail/issues/487
 //	abort(action, 0, 1);
 	const controller = new AbortController(),
 		signal = controller.signal;

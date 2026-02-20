@@ -269,7 +269,7 @@ export class DomainPopupView extends AbstractViewPopup {
 
 	testConnectionCommand() {
 		this.clearTesting();
-		// https://github.com/nextgen-networks/snappymail/issues/477
+		// https://github.com/the-djmaze/snappymail/issues/477
 		AskPopupView.credentials('IMAP', 'GLOBAL/TEST').then(credentials => {
 			if (credentials) {
 				this.testing(true);

@@ -123,7 +123,7 @@ trait Status
 				if (\is_string($value)) {
 					$this->MAILBOXID = \base64_encode($value);
 				} else {
-					// Cyrus bug https://github.com/nextgen-networks/snappymail/issues/1640
+					// Cyrus bug https://github.com/the-djmaze/snappymail/issues/1640
 					\error_log("{$this->FullName} invalid MAILBOXID value. Disable the OBJECTID capability.");
 				}
 			} else {
@@ -172,7 +172,7 @@ trait Status
 							$oResponse->ResponseList[3][$i+1]
 						);
 					} else {
-						// https://github.com/nextgen-networks/snappymail/issues/1640
+						// https://github.com/the-djmaze/snappymail/issues/1640
 						\error_log("{$this->FullName} STATUS missing value for {$oResponse->ResponseList[3][$i]}");
 					}
 				}

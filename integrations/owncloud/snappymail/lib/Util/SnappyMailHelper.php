@@ -30,7 +30,7 @@ class SnappyMailHelper
 		$app_dir = \dirname(\dirname(__DIR__)) . '/app';
 		require_once $app_dir . '/index.php';
 
-		// https://github.com/nextgen-networks/snappymail/issues/790#issuecomment-1366527884
+		// https://github.com/the-djmaze/snappymail/issues/790#issuecomment-1366527884
 		if (!file_exists($app_dir . '/.htaccess') && file_exists($app_dir . '/_htaccess')) {
 			rename($app_dir . '/_htaccess', $app_dir . '/.htaccess');
 			if (!file_exists(APP_VERSION_ROOT_PATH . '/app/.htaccess') && file_exists(APP_VERSION_ROOT_PATH . '/app/_htaccess')) {
@@ -122,7 +122,7 @@ class SnappyMailHelper
 				$aCredentials = static::getLoginCredentials();
 /*
 				// NC25+ workaround for Impersonate plugin
-				// https://github.com/nextgen-networks/snappymail/issues/561#issuecomment-1301317723
+				// https://github.com/the-djmaze/snappymail/issues/561#issuecomment-1301317723
 				// https://github.com/nextcloud/server/issues/34935#issuecomment-1302145157
 				require \OC::$SERVERROOT . '/version.php';
 //				\OC\SystemConfig

@@ -249,7 +249,7 @@ class Message implements \JsonSerializable
 						$oMessage->sSpamResult = "{$value[1]} / {$required[1]}";
 					}
 				}
-				// https://github.com/nextgen-networks/snappymail/issues/1228
+				// https://github.com/the-djmaze/snappymail/issues/1228
 				else if (\preg_match('@([\\d\\.]+)/([\\d\\.]+)@', $spam, $value)
 				  || \preg_match('@([\\d\\.]+)/([\\d\\.]+)@', $oHeaders->ValueByName(MimeHeader::X_SPAM_INFO), $value)
 				) {

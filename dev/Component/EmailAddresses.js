@@ -143,7 +143,7 @@ export class EmailAddressesComponent {
 								datalist.append(new Option(item));
 								chars = Math.max(chars, item.length);
 							});
-							// https://github.com/nextgen-networks/snappymail/issues/368 and #513
+							// https://github.com/the-djmaze/snappymail/issues/368 and #513
 							chars *= 8;
 							if (input.clientWidth < chars) {
 								input.style.width = chars + 'px';

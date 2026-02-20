@@ -508,7 +508,7 @@ MessagelistUserStore.moveMessages = (
 		} else {
 			MessagelistUserStore.isIncomplete(true);
 
-			// Select next email https://github.com/nextgen-networks/snappymail/issues/968
+			// Select next email https://github.com/the-djmaze/snappymail/issues/968
 			if (currentMessage && 1 == messages.length && SettingsUserStore.showNextMessage()) {
 				let next = MessagelistUserStore.indexOf(currentMessage) + 1;
 				if (0 < next && (next = MessagelistUserStore()[next])) {

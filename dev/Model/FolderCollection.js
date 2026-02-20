@@ -438,8 +438,8 @@ export class FolderModel extends AbstractModel {
 /*
 			{
 				// TODO: make this optional in Settings
-				// https://github.com/nextgen-networks/snappymail/issues/457
-				// https://github.com/nextgen-networks/snappymail/issues/567
+				// https://github.com/the-djmaze/snappymail/issues/457
+				// https://github.com/the-djmaze/snappymail/issues/567
 				const
 					unread = this.unreadEmails(),
 					type = this.type();

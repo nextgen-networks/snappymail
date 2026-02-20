@@ -337,7 +337,7 @@ trait Accounts
 	 */
 	public function DoAccountsAndIdentities(): array
 	{
-		// https://github.com/nextgen-networks/snappymail/issues/571
+		// https://github.com/the-djmaze/snappymail/issues/571
 		return $this->DefaultResponse(array(
 			'Accounts' => \array_values(\array_map(function($value){
 					return [

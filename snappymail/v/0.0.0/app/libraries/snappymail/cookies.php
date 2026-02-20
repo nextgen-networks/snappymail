@@ -118,7 +118,7 @@ class Cookies
 		static::init();
 		$sPath = static::$DefaultPath;
 		$sPath = $sPath && \strlen($sPath) ? $sPath : '/';
-		// https://github.com/nextgen-networks/snappymail/issues/451
+		// https://github.com/the-djmaze/snappymail/issues/451
 		// The 4K browser limit is for the entire cookie, including name, value, expiry date etc.
 		$iMaxSize = 4000 - \strlen($sPath . $sName);
 /*

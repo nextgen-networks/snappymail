@@ -39,8 +39,8 @@ trait ResponseParser
 
 	/**
 	 * A bug in the parser converts folder names that start with '[' into arrays.
-	 * https://github.com/nextgen-networks/snappymail/issues/1
-	 * https://github.com/nextgen-networks/snappymail/issues/70
+	 * https://github.com/the-djmaze/snappymail/issues/1
+	 * https://github.com/the-djmaze/snappymail/issues/70
 	 * The fix RainLoop implemented isn't correct either.
 	 * This one should as RFC 3501 only mentions:
 	 *

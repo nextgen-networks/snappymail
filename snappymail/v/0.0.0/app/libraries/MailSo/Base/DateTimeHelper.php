@@ -41,9 +41,9 @@ abstract class DateTimeHelper
 			return 0;
 		}
 
-		// Strip invalid data after zone, https://github.com/nextgen-networks/snappymail/issues/1554
+		// Strip invalid data after zone, https://github.com/the-djmaze/snappymail/issues/1554
 		$sDateTime = \preg_replace('/\s+\([a-zA-Z0-9]+\)$/', '', $sDateTime);
-		// https://github.com/nextgen-networks/snappymail/issues/1694#issuecomment-2270983942
+		// https://github.com/the-djmaze/snappymail/issues/1694#issuecomment-2270983942
 		// Strip day-of-week
 		$sDateTime = \preg_replace('/^[^,]+,/', '', $sDateTime);
 		// Add optional seconds

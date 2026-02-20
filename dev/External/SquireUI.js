@@ -38,13 +38,13 @@ class SquireUI
 		const
 			clr = createElement('input'),
 			doClr = name => input => {
-				// https://github.com/nextgen-networks/snappymail/issues/826
+				// https://github.com/the-djmaze/snappymail/issues/826
 				clr.style.left = (input.offsetLeft + input.parentNode.offsetLeft) + 'px';
 				clr.style.width = input.offsetWidth + 'px';
 
 				clr.value = '';
 				clr.onchange = () => squire.setStyle({[name]:clr.value});
-				// Chrome 110+ https://github.com/nextgen-networks/snappymail/issues/1199
+				// Chrome 110+ https://github.com/the-djmaze/snappymail/issues/1199
 //				clr.oninput = () => squire.setStyle({[name]:clr.value});
 				setTimeout(()=>clr.click(),1);
 			},
@@ -263,7 +263,7 @@ class SquireUI
 
 		clr.type = 'color';
 		toolbar.append(clr);
-		// Chrome https://github.com/nextgen-networks/snappymail/issues/1199
+		// Chrome https://github.com/the-djmaze/snappymail/issues/1199
 		let clrid = 'squire-colors',
 			colorlist = doc.getElementById(clrid),
 			add = hex => colorlist.append(new Option(hex));

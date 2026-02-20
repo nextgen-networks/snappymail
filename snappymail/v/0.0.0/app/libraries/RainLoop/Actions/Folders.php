@@ -66,7 +66,7 @@ trait Folders
 					}
 				}
 			} catch (\Throwable $e) {
-				// https://github.com/nextgen-networks/snappymail/issues/1438
+				// https://github.com/the-djmaze/snappymail/issues/1438
 				// $oAccount->Domain()->ImapSettings()->disabled_capabilities[] = 'NAMESPACE';
 				// $this->DomainProvider()->Save($oAccount->Domain());
 			}
@@ -78,7 +78,7 @@ trait Folders
 					}
 				}
 			} catch (\Throwable $e) {
-				// https://github.com/nextgen-networks/snappymail/issues/1438
+				// https://github.com/the-djmaze/snappymail/issues/1438
 				// $oAccount->Domain()->ImapSettings()->disabled_capabilities[] = 'NAMESPACE';
 				// $this->DomainProvider()->Save($oAccount->Domain());
 			}

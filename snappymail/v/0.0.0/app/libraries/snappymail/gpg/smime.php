@@ -65,7 +65,7 @@ class SMIME extends Base
 
 	/**
 	 * TODO: parse result
-	 * https://github.com/nextgen-networks/snappymail/issues/89
+	 * https://github.com/the-djmaze/snappymail/issues/89
 	 */
 	protected function listDecryptKeys(/*string|resource*/ $input, /*string|resource*/ $output = null)
 	{
@@ -134,7 +134,7 @@ class SMIME extends Base
 	 */
 	public function decryptVerify(string $text, string &$plaintext) /*: array|false*/
 	{
-		// TODO: https://github.com/nextgen-networks/snappymail/issues/89
+		// TODO: https://github.com/the-djmaze/snappymail/issues/89
 		return false;
 	}
 
@@ -143,7 +143,7 @@ class SMIME extends Base
 	 */
 	public function decryptVerifyFile(string $filename, string &$plaintext) /*: array|false*/
 	{
-		// TODO: https://github.com/nextgen-networks/snappymail/issues/89
+		// TODO: https://github.com/the-djmaze/snappymail/issues/89
 		return false;
 	}
 

@@ -35,7 +35,7 @@
 					});
 					if (urls.length) {
 						// TODO: other editors and text/plain
-						// https://github.com/nextgen-networks/snappymail/issues/981
+						// https://github.com/the-djmaze/snappymail/issues/981
 						view.oEditor.editor.squire.insertHTML(urls.join("<br>"));
 					}
 				});

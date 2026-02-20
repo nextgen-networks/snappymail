@@ -58,7 +58,7 @@ class LogincPanelPlugin extends \RainLoop\Plugins\AbstractPlugin
 
 	public function FilterLoginCredentials(&$sEmail, &$sImapUser, &$sPassword, &$sSmtpUser)
 	{
-		// cPanel https://github.com/nextgen-networks/snappymail/issues/697
+		// cPanel https://github.com/the-djmaze/snappymail/issues/697
 //		 && !empty($_ENV['CPANEL'])
 		if (static::$login/* && $sImapUser == $_ENV['REMOTE_USER']*/) {
 			if (empty($_ENV['REMOTE_TEMP_USER'])) {

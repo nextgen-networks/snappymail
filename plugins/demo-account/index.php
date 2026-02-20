@@ -61,7 +61,7 @@ class DemoAccountPlugin extends \RainLoop\Plugins\AbstractPlugin
 			$aActionParams['Password'] = $this->Config()->Get('plugin', 'password');
 		}
 		else if ('DoFolderCreate' === $sMethodName || 'DoFolderRename' === $sMethodName) {
-			// Block spam https://github.com/nextgen-networks/snappymail/issues/371
+			// Block spam https://github.com/the-djmaze/snappymail/issues/371
 			$latin = transliterator_transliterate('Any-Latin; Latin-ASCII; Lower()', $aActionParams['folder']);
 			if (false !== \strpos($latin, 'nigger')) {
 				\error_log("blocked {$sMethodName} {$aActionParams['folder']}");

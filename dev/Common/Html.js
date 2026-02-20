@@ -308,16 +308,16 @@ export const
 			// Not supported by <template> element
 //			.replace(/<!doctype[^>]*>/gi, '')
 //			.replace(/<\?xml[^>]*\?>/gi, '')
-			// https://github.com/nextgen-networks/snappymail/issues/1860
+			// https://github.com/the-djmaze/snappymail/issues/1860
 			.replace(/<(\/?)x-html(\s[^>]*)?>/gi, '')
 			.replace(/<(\/?)head(\s[^>]*)?>/gi, '')
 			.replace(/<(\/?)body(\s[^>]*)?>/gi, '<$1div class="mail-body"$2>')
 //			.replace(/<\/?(html|head)[^>]*>/gi, '')
-			// Fix Reddit https://github.com/nextgen-networks/snappymail/issues/540
+			// Fix Reddit https://github.com/the-djmaze/snappymail/issues/540
 			.replace(/<span class="preview-text"[\s\S]+?<\/span>/, '')
-			// https://github.com/nextgen-networks/snappymail/issues/900
+			// https://github.com/the-djmaze/snappymail/issues/900
 			.replace(/\u2028/g,' ')
-			// https://github.com/nextgen-networks/snappymail/issues/1415
+			// https://github.com/the-djmaze/snappymail/issues/1415
 			.replace(/<br>\s*<\/p>/gi,'</p>')
 			.trim();
 		html = '';
@@ -343,7 +343,7 @@ export const
 			}
 		});
 
-		// https://github.com/nextgen-networks/snappymail/issues/1125
+		// https://github.com/the-djmaze/snappymail/issues/1125
 		tmpl.content.querySelectorAll(keepTagContent).forEach(oElement => replaceWithChildren(oElement));
 
 		tmpl.content.querySelectorAll(
@@ -359,7 +359,7 @@ export const
 		});
 */
 
-		// https://github.com/nextgen-networks/snappymail/issues/1641
+		// https://github.com/the-djmaze/snappymail/issues/1641
 		let body = tmpl.content.querySelector('.mail-body');
 		[...tmpl.content.querySelectorAll('.mail-body + .mail-body')]
 			.forEach(oElement => body.append(...oElement.childNodes));
@@ -626,7 +626,7 @@ export const
 					setAttribute('data-x-style-broken-urls', JSON.stringify(urls_broken));
 				}
 /*
-				// https://github.com/nextgen-networks/snappymail/issues/1082
+				// https://github.com/the-djmaze/snappymail/issues/1082
 				if (11 > pInt(oStyle.fontSize)) {
 					oStyle.removeProperty('font-size');
 				}
@@ -775,7 +775,7 @@ export const
 		plain = plain.toString()
 			.replace(/\r/g, '')
 			.replace(/^>[> ]>+/gm, ([match]) => (match ? match.replace(/[ ]+/g, '') : match))
-			// https://github.com/nextgen-networks/snappymail/issues/900
+			// https://github.com/the-djmaze/snappymail/issues/900
 			.replace(/\u2028/g,' ');
 
 		let bIn = false,

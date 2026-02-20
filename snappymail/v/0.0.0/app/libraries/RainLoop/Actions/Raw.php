@@ -125,7 +125,7 @@ trait Raw
 			if (!\is_resource($rResource)) {
 				return false;
 			}
-			// https://github.com/nextgen-networks/snappymail/issues/144
+			// https://github.com/the-djmaze/snappymail/issues/144
 			if ('.pdf' === \substr($sFileNameIn,-4)) {
 				$sContentTypeOut = 'application/pdf'; // application/octet-stream
 			} else {
@@ -174,7 +174,7 @@ trait Raw
 					$sFileName = $self->clearFileName($sFileName, $sContentType, $sMimeIndex);
 
 					if ('.pdf' === \substr($sFileName, -4)) {
-						// https://github.com/nextgen-networks/snappymail/issues/144
+						// https://github.com/the-djmaze/snappymail/issues/144
 						$sContentType = 'application/pdf';
 					} else {
 						$sContentType = $sContentTypeIn

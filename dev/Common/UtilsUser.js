@@ -56,7 +56,7 @@ loadAccountsAndIdentities = () => {
 			);
 
 			// Invoke "Update Identity" pop up right after login
-			// https://github.com/nextgen-networks/snappymail/issues/1689
+			// https://github.com/the-djmaze/snappymail/issues/1689
 			const main = IdentityUserStore.main();
 			main && !main.exists() && setTimeout(()=>editIdentity(main), 1000);
 		}
@@ -69,7 +69,7 @@ loadAccountsAndIdentities = () => {
  */
 download = (link, name = "") => {
 	console.log('download: '+link);
-	// Firefox 98 issue https://github.com/nextgen-networks/snappymail/issues/301
+	// Firefox 98 issue https://github.com/the-djmaze/snappymail/issues/301
 	if (ThemeStore.isMobile() || /firefox/i.test(navigator.userAgent)) {
 		open(link, '_blank');
 		focus();

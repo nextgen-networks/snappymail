@@ -25,7 +25,7 @@
 		}
 	});
 
-	// https://github.com/nextgen-networks/snappymail/issues/349
+	// https://github.com/the-djmaze/snappymail/issues/349
 	addEventListener('sm-show-screen', e => {
 		if (!e.detail.startsWith('settings') && rl.settings.get('SetupTwoFactor')) {
 			e.preventDefault();

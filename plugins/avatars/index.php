@@ -27,7 +27,7 @@ class AvatarsPlugin extends \RainLoop\Plugins\AbstractPlugin
 		if ($identicon && \is_file(__DIR__ . "/{$identicon}.js")) {
 			$this->addJs("{$identicon}.js");
 		}
-		// https://github.com/nextgen-networks/snappymail/issues/714
+		// https://github.com/the-djmaze/snappymail/issues/714
 		if ($this->Config()->Get('plugin', 'service', true)
 //		 || !$this->Config()->Get('plugin', 'delay', true)
 		 || $this->Config()->Get('plugin', 'gravatar', false)

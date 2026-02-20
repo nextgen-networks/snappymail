@@ -162,7 +162,7 @@ class SmtpClient extends \MailSo\Net\NetClient
 		$SASL = \SnappyMail\SASL::factory($type);
 
 		if ($this->Settings->authPlainLine && $SASL instanceof \SnappyMail\SASL\Plain) {
-			// https://github.com/nextgen-networks/snappymail/issues/1038
+			// https://github.com/the-djmaze/snappymail/issues/1038
 			try
 			{
 				$sRequest = $SASL->authenticate($sLogin, $sPassword);
