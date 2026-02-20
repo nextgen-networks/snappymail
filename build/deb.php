@@ -53,7 +53,7 @@ passthru('mv '
 
 passthru('rm -dfr '.escapeshellarg(DEB_DEST_DIR));
 
-// https://github.com/the-djmaze/snappymail/issues/185#issuecomment-1059420588
+// https://github.com/nextgen-networks/snappymail/issues/185#issuecomment-1059420588
 $cwd = getcwd();
 chdir($TARGET_DIR);
 passthru('dpkg-scanpackages . /dev/null > '.escapeshellarg($TARGET_DIR . 'Packages'));

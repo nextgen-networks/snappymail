@@ -132,7 +132,7 @@ class LdapMailAccounts
 			return false; // exceptions are only thrown from the handle error function that does logging already
 		}
 
-		//Basing on https://github.com/the-djmaze/snappymail/issues/616
+		//Basing on https://github.com/nextgen-networks/snappymail/issues/616
 
 		$oActions = \RainLoop\Api::Actions();
 
@@ -192,7 +192,7 @@ class LdapMailAccounts
 		//When the password of the main account changes, SnappyMail asks the user for the old password to reencrypt the keys with the new userpassword.
 		//On a password change using ldap (or when the password has been forgotten by the user) this makes us some problems. Therefore overwrite
 		//the .cryptkey file in order to always accept the actual ldap password of the user. This has side effects on pgp keys! 
-		//See https://github.com/the-djmaze/snappymail/issues/1570#issuecomment-2085528061
+		//See https://github.com/nextgen-networks/snappymail/issues/1570#issuecomment-2085528061
 		if ($this->config->bool_overwrite_cryptkey) {
 			if (!$oActions->StorageProvider()->Put($oAccount, StorageType::ROOT, '.cryptkey', "")) {
 				$this->logger->Write("Could not overwrite the .cryptkey file!", \LOG_WARNING, self::LOG_KEY);

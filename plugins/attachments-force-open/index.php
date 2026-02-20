@@ -5,7 +5,7 @@ class AttachmentsForceOpenPlugin extends \RainLoop\Plugins\AbstractPlugin
 	const
 		NAME     = 'Attachments force open',
 		AUTHOR   = 'SnappyMail',
-		URL      = 'https://github.com/the-djmaze/snappymail/pull/1489',
+		URL      = 'https://github.com/nextgen-networks/snappymail/pull/1489',
 		VERSION  = '0.1',
 		RELEASE  = '2024-03-15',
 		REQUIRED = '2.14.0',

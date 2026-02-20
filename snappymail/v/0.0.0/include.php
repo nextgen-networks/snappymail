@@ -128,7 +128,7 @@ if (isset($_SERVER['HTTPS']) && !headers_sent()) {
 	header('Strict-Transport-Security: max-age=31536000');
 }
 
-// cPanel https://github.com/the-djmaze/snappymail/issues/697
+// cPanel https://github.com/nextgen-networks/snappymail/issues/697
 if (!empty($_ENV['CPANEL']) && !is_dir(APP_PLUGINS_PATH.'login-remote')) {
 	require __DIR__ . '/cpanel.php';
 }

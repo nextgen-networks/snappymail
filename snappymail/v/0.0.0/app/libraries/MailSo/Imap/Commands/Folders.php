@@ -83,7 +83,7 @@ trait Folders
 //		$this->FolderCheck();
 
 		// Will this workaround solve Dovecot issue?
-		// https://github.com/the-djmaze/snappymail/issues/124
+		// https://github.com/nextgen-networks/snappymail/issues/124
 		try {
 			$this->FolderRename($sFolderName, "{$sFolderName}-dummy");
 			$this->FolderRename("{$sFolderName}-dummy", $sFolderName);

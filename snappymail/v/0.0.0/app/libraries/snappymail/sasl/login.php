@@ -15,7 +15,7 @@ class Login extends \SnappyMail\SASL
 		?string $challenge = null) : string
 	{
 		// $challenge should be 'VXNlcm5hbWU6', but broken on some systems
-		// See https://github.com/the-djmaze/snappymail/issues/693
+		// See https://github.com/nextgen-networks/snappymail/issues/693
 		if ($challenge && !\str_starts_with($this->decode($challenge), 'Username:')) {
 			throw new \Exception("Invalid response: {$this->decode($challenge)}");
 		}

@@ -259,7 +259,7 @@ trait UserAuth
 			if ($aData) {
 				/**
 				 * Server side control/kickout of logged in sessions
-				 * https://github.com/the-djmaze/snappymail/issues/151
+				 * https://github.com/nextgen-networks/snappymail/issues/151
 				 */
 				$sToken = Utils::GetSessionToken(false);
 				if (!$sToken) {

@@ -306,7 +306,7 @@
 
 			const clr = this.makeClr();
 			const doClr = name => input => {
-				// https://github.com/the-djmaze/snappymail/issues/826
+				// https://github.com/nextgen-networks/snappymail/issues/826
 				clr.style.left = (input.offsetLeft + input.parentNode.offsetLeft) + 'px';
 				clr.style.width = input.offsetWidth + 'px';
 
@@ -324,7 +324,7 @@
 							console.error('invalid name:', name);
 					}
 				};
-				// Chrome 110+ https://github.com/the-djmaze/snappymail/issues/1199
+				// Chrome 110+ https://github.com/nextgen-networks/snappymail/issues/1199
 //				clr.oninput = () => squire.setStyle({[name]:clr.value});
 				setTimeout(() => clr.click(), 1);
 			};
@@ -653,7 +653,7 @@
 			/**@type {HTMLInputElement} clr*/
 			const clr = createElement('input');
 			clr.type = 'color';
-			// Chrome https://github.com/the-djmaze/snappymail/issues/1199
+			// Chrome https://github.com/nextgen-networks/snappymail/issues/1199
 			let clrid = 'squire-colors',
 				colorlist = doc.getElementById(clrid),
 				add = hex => colorlist.append(new Option(hex));

@@ -968,7 +968,7 @@ export class ComposePopupView extends AbstractViewPopup {
 				// no default
 			}
 
-			// https://github.com/the-djmaze/snappymail/issues/491
+			// https://github.com/nextgen-networks/snappymail/issues/491
 			tpl.innerHTML = oLastMessage.bodyAsHTML();
 			tpl.content.querySelectorAll('img').forEach(img => {
 				img.src || img.dataset.xSrc || img.replaceWith(img.alt || img.title)

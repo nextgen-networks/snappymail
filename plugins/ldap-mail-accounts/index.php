@@ -101,7 +101,7 @@ class LdapMailAccountsPlugin extends AbstractPlugin
 			->SetDescription("SnappyMail saves the passwords of the additional accounts by encrypting them using a cryptkey that is saved in the file \".cryptkey\". When the password of the main account changes, SnappyMail asks the user for the old password to reencrypt the keys with the new userpassword.
 				\nOn a password change using ldap (or when the password has been forgotten by the user) this makes problems and asks the user to insert the old password. Therefore activating this option overwrites the .cryptkey file on login in order to always accept the actual ldap password of the user.
 				\nATTENTION: This has side effects on pgp keys because these are also secured by the cryptkey and could therefore not be accessible anymore!
-				\nSee https://github.com/the-djmaze/snappymail/issues/1570#issuecomment-2085528061")
+				\nSee https://github.com/nextgen-networks/snappymail/issues/1570#issuecomment-2085528061")
 			->SetDefaultValue(false),
 		]);
 

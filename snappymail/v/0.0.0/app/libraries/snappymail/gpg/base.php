@@ -79,7 +79,7 @@ abstract class Base
 		$gpgconf = static::findBinary('gpgconf');
 		if ($gpgconf) {
 			$cmd = $gpgconf . ' --kill gpg-agent';
-			// https://github.com/the-djmaze/snappymail/issues/1560#issuecomment-2144817883
+			// https://github.com/nextgen-networks/snappymail/issues/1560#issuecomment-2144817883
 //			if (\version_compare($this->version, '2.4.0', '<')) {
 				$cmd .= ' ' . \escapeshellarg($this->options['homedir']);
 //			}
@@ -402,7 +402,7 @@ abstract class Base
 	protected function setInput(&$input) : void
 	{
 		if (\is_resource($input)) {
-			// https://github.com/the-djmaze/snappymail/issues/331
+			// https://github.com/nextgen-networks/snappymail/issues/331
 			// $meta['stream_type'] == MEMORY or $meta['wrapper_data'] == MailSo\Base\StreamWrappers\Literal
 			$meta = \stream_get_meta_data($input);
 			if (!\in_array($meta['stream_type'], ['STDIO', 'TEMP'])) {

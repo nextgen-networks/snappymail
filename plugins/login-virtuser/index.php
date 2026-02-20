@@ -5,7 +5,7 @@ class LoginVirtuserPlugin extends \RainLoop\Plugins\AbstractPlugin
 	const
 		NAME = 'Virtuser Login',
 		AUTHOR = 'v20z',
-		URL     = 'https://github.com/the-djmaze/snappymail/issues/1691',
+		URL     = 'https://github.com/nextgen-networks/snappymail/issues/1691',
 		VERSION = '0.2',
 		RELEASE = '2024-09-20',
 		REQUIRED = '2.36.1',

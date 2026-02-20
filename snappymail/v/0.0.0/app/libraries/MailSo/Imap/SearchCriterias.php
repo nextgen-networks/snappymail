@@ -315,7 +315,7 @@ class SearchCriterias
 							}
 							break;
 
-						// https://github.com/the-djmaze/snappymail/issues/625
+						// https://github.com/nextgen-networks/snappymail/issues/625
 						case 'READ':
 						case 'UNREAD':
 							$aCriteriasResult[] = \str_replace('READ', 'SEEN', $sName);
@@ -369,7 +369,7 @@ class SearchCriterias
 
 	public static function escapeSearchString(\MailSo\Imap\ImapClient $oImapClient, string $sSearch) : string
 	{
-		// https://github.com/the-djmaze/snappymail/issues/836
+		// https://github.com/nextgen-networks/snappymail/issues/836
 //		return $oImapClient->EscapeString($sSearch);
 //		return \MailSo\Base\Utils::IsAscii($sSearch) || $oImapClient->hasCapability('QQMail'))
 		return (\MailSo\Base\Utils::IsAscii($sSearch) || !$oImapClient->hasCapability('LITERAL+'))

@@ -27,7 +27,7 @@
 				}
 			}
 /*
-			// https://github.com/the-djmaze/snappymail/issues/592
+			// https://github.com/nextgen-networks/snappymail/issues/592
 			if (cfg.CalDAV) {
 				const attachmentsPlace = template.content.querySelector('.attachmentsPlace');
 				attachmentsPlace.after(Element.fromHTML(`

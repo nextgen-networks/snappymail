@@ -78,7 +78,7 @@ class PGP extends Base implements \SnappyMail\PGP\PGPInterface
 
 	/**
 	 * TODO: parse result
-	 * https://github.com/the-djmaze/snappymail/issues/89
+	 * https://github.com/nextgen-networks/snappymail/issues/89
 	 */
 	protected function listDecryptKeys(/*string|resource*/ $input, /*string|resource*/ $output = null)
 	{
@@ -137,7 +137,7 @@ class PGP extends Base implements \SnappyMail\PGP\PGPInterface
 	 */
 	public function decryptVerify(string $text, string &$plaintext) /*: array|false*/
 	{
-		// TODO: https://github.com/the-djmaze/snappymail/issues/89
+		// TODO: https://github.com/nextgen-networks/snappymail/issues/89
 		return false;
 	}
 
@@ -146,7 +146,7 @@ class PGP extends Base implements \SnappyMail\PGP\PGPInterface
 	 */
 	public function decryptVerifyFile(string $filename, string &$plaintext) /*: array|false*/
 	{
-		// TODO: https://github.com/the-djmaze/snappymail/issues/89
+		// TODO: https://github.com/nextgen-networks/snappymail/issues/89
 		return false;
 	}
 

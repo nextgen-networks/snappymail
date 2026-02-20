@@ -48,7 +48,7 @@ class InstallStep implements IRepairStep
 		$app_dir = \dirname(\dirname(__DIR__)) . '/app';
 //		$app_dir = \rtrim(APP_INDEX_ROOT_PATH, '\\/');
 
-		// https://github.com/the-djmaze/snappymail/issues/790#issuecomment-1366527884
+		// https://github.com/nextgen-networks/snappymail/issues/790#issuecomment-1366527884
 		if (!\file_exists($app_dir . '/.htaccess') && \file_exists($app_dir . '/_htaccess')) {
 			\rename($app_dir . '/_htaccess', $app_dir . '/.htaccess');
 		}
@@ -125,7 +125,7 @@ class InstallStep implements IRepairStep
 		// check if admins provided additional/custom initial config file
 		// https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/occ_command.html#setting-a-single-configuration-value
 		// ex: php occ config:app:set snappymail custom_config_file --value="/path/to/config.php"
-		// https://github.com/the-djmaze/snappymail/pull/1197
+		// https://github.com/nextgen-networks/snappymail/pull/1197
 		try {
 			$customConfigFile = $this->config->getAppValue(Application::APP_ID, 'custom_config_file');
 			if ($customConfigFile) {

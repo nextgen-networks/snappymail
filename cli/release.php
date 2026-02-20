@@ -207,7 +207,7 @@ if ($options['aur']) {
 	pkgdesc = modern PHP webmail client
 	pkgver = '.$package->version.'
 	pkgrel = 1
-	url = https://github.com/nextgen-networks/snappymail
+	url = https://github.com/nextgen-networks/snappymail/
 	arch = any
 	license = AGPL3
 	makedepends = php

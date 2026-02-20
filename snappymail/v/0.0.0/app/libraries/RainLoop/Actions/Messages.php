@@ -1151,7 +1151,7 @@ trait Messages
 			}
 		}
 /*
-		// OpenPGP https://github.com/the-djmaze/snappymail/issues/1587
+		// OpenPGP https://github.com/nextgen-networks/snappymail/issues/1587
 		$sPublicKey = $this->GetActionParam('publicKey', '');
 		if ($sPublicKey) {
 			$oMessage->Attachments()->append(
@@ -1199,7 +1199,7 @@ trait Messages
 		if ($sFingerprint) {
 			$GPG = $this->GnuPG();
 /*
-			// https://github.com/the-djmaze/snappymail/issues/1587
+			// https://github.com/nextgen-networks/snappymail/issues/1587
 			if ($this->GetActionParam('attachPublicKey', false)) {
 				$sPublicKey = $GPG->export($sFingerprint);
 				$oMessage->Attachments()->append(
@@ -1269,7 +1269,7 @@ trait Messages
 				}
 			}
 /*
-			// https://github.com/the-djmaze/snappymail/issues/1587
+			// https://github.com/nextgen-networks/snappymail/issues/1587
 			if ($sCertificate && $this->GetActionParam('attachCertificate', false)) {
 				$oMessage->Attachments()->append(
 					new \MailSo\Mime\Attachment(

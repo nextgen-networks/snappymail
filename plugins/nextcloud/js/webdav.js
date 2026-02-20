@@ -113,7 +113,7 @@ const
 				}
 				elemList.push(elem);
 			}
-			// https://github.com/the-djmaze/snappymail/issues/1177
+			// https://github.com/nextgen-networks/snappymail/issues/1177
 //			elemList.sort((a, b) => a.isFile != b.isFile ? (a.isFile ? 1 : -1) : a.name.localeCompare(b.name));
 			return Promise.resolve(elemList);
 		});
@@ -122,7 +122,7 @@ const
 	buildTree = (view, parent, items, path) => {
 		if (items.length) {
 			try {
-				// https://github.com/the-djmaze/snappymail/issues/1109
+				// https://github.com/nextgen-networks/snappymail/issues/1109
 				let collator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'});
 				items.sort((a, b) => collator.compare(a.name, b.name));
 			} catch (e) {

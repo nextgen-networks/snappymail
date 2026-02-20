@@ -24,7 +24,7 @@ class Settings extends \MailSo\Net\ConnectSettings
 	public bool
 		$setSender = false,
 		$usePhpMail = false,
-		// https://github.com/the-djmaze/snappymail/issues/1038
+		// https://github.com/nextgen-networks/snappymail/issues/1038
 		$authPlainLine = false,
 		$viewErrors = false;
 

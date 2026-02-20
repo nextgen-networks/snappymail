@@ -187,7 +187,7 @@ class SieveClient extends \MailSo\Net\NetClient
 			try {
 				$this->sendRequestWithCheck('LOGOUT');
 			} catch (\Throwable $e) {
-				// https://github.com/the-djmaze/snappymail/issues/1455
+				// https://github.com/nextgen-networks/snappymail/issues/1455
 				$this->writeLogException($e, \LOG_WARNING, false);
 			}
 			$this->bIsLoggined = false;

@@ -136,7 +136,7 @@ abstract class Service
 		}
 
 		if ($bIndex) {
-			// https://github.com/the-djmaze/snappymail/issues/1024
+			// https://github.com/nextgen-networks/snappymail/issues/1024
 			$oHttp->ServerNoCache();
 
 			if (!$bAdmin) {
@@ -195,7 +195,7 @@ abstract class Service
 				))
 			);
 
-			// https://github.com/the-djmaze/snappymail/issues/1024
+			// https://github.com/nextgen-networks/snappymail/issues/1024
 //			$oActions->verifyCacheByKey($sCacheFileName);
 
 			if ($oConfig->Get('cache', 'system_data', true)) {
@@ -237,7 +237,7 @@ abstract class Service
 			$sScriptHash = 'sha256-'.\base64_encode(\hash('sha256', $script[1], true));
 			static::setCSP(null, $sScriptHash);
 */
-			// https://github.com/the-djmaze/snappymail/issues/1024
+			// https://github.com/nextgen-networks/snappymail/issues/1024
 //			$oActions->cacheByKey($sCacheFileName);
 
 			echo $sResult;

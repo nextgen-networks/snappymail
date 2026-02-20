@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/the-djmaze/snappymail.git"
+    "url": "git://github.com/nextgen-networks/snappymail.git"
   },
   "scripts": {
     "watch-css": "gulp watchCss"
@@ -25,7 +25,7 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/the-djmaze/snappymail/issues"
+    "url": "https://github.com/nextgen-networks/snappymail/issues"
   },
   "keywords": [
     "webmail",

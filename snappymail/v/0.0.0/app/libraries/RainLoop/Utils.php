@@ -125,7 +125,7 @@ class Utils
 		return self::WebPath() . 'snappymail/v/' . APP_VERSION . '/';
 		/**
 		 * TODO: solve this to support other paths.
-		 * https://github.com/the-djmaze/snappymail/issues/685
+		 * https://github.com/nextgen-networks/snappymail/issues/685
 		 */
 //		return self::WebPath() . \str_replace(APP_INDEX_ROOT_PATH, '', APP_VERSION_ROOT_PATH);
 	}
